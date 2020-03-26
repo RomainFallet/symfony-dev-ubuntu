@@ -36,9 +36,7 @@ Its purpose in not to be bullet-proof neither to handle all cases. It's  just he
 
 [Back to top ↑](#table-of-contents)
 
-Ubuntu 18.04:
-
-```powershell
+```bash
 # Get and execute script directly
 bash -c "$(wget --no-cache -O- https://raw.githubusercontent.com/RomainFallet/symfony-dev-ubuntu/master/ubuntu18.04_configure_dev_env.sh)"
 ```
@@ -50,8 +48,6 @@ bash -c "$(wget --no-cache -O- https://raw.githubusercontent.com/RomainFallet/sy
 ### Prerequisites
 
 [Back to top ↑](#table-of-contents)
-
-Ubuntu 18.04 Desktop:
 
 ![curl](https://user-images.githubusercontent.com/6952638/70372369-31785f00-18de-11ea-9835-2946537372ea.jpg)
 
@@ -71,8 +67,6 @@ sudo apt install -y software-properties-common curl
 
 ![git](https://user-images.githubusercontent.com/6952638/71176962-3a1c4e00-226b-11ea-83a1-5a66bd37a68b.png)
 
-Ubuntu 18.04 Desktop:
-
 ```bash
 # Install
 sudo apt install -y git
@@ -83,8 +77,6 @@ sudo apt install -y git
 [Back to top ↑](#table-of-contents)
 
 ![symfony](https://user-images.githubusercontent.com/6952638/71176964-3ab4e480-226b-11ea-8522-081106cbff50.png)
-
-Ubuntu 18.04 Desktop:
 
 ```bash
 # Download executable in local user folder
@@ -99,8 +91,6 @@ sudo mv ~/.symfony/bin/symfony /usr/local/bin/symfony
 [Back to top ↑](#table-of-contents)
 
 ![php](https://user-images.githubusercontent.com/6952638/70372327-bca52500-18dd-11ea-8638-7cdab7c5d6e0.png)
-
-Ubuntu 18.04 Desktop:
 
 ```bash
 # Add PHP official repository
@@ -134,8 +124,6 @@ sudo update-alternatives --set php /usr/bin/php7.3
 [Back to top ↑](#table-of-contents)
 
 ![composer](https://user-images.githubusercontent.com/6952638/70372308-a008ed00-18dd-11ea-9ee0-61d017dfa488.png)
-
-Ubuntu 18.04 Desktop:
 
 ```bash
 # Download installer
@@ -176,8 +164,6 @@ sudo apt install -y mariadb-server-10.4
 
 ![node](https://user-images.githubusercontent.com/6952638/71177167-a4cd8980-226b-11ea-9095-c96d5b96faa7.png)
 
-Ubuntu 18.04 Desktop:
-
 ```bash
 # Add NodeJS official repository and update packages list
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
@@ -191,8 +177,6 @@ sudo apt install -y nodejs
 [Back to top ↑](#table-of-contents)
 
 ![yarn](https://user-images.githubusercontent.com/6952638/70372314-a13a1a00-18dd-11ea-9cdb-7b976c2beab8.png)
-
-Ubuntu 18.04 Desktop:
 
 ```bash
 # Add Yarn official repository
