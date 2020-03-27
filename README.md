@@ -70,6 +70,10 @@ sudo apt install -y software-properties-common curl
 ```bash
 # Install
 sudo apt install -y git
+
+# Configure Git
+git config --global user.name "$(read -r -p 'Enter your Git name: ' gitname && echo "${gitname}")"
+git config --global user.email "$(read -r -p 'Enter your Git email: ' gitemail && echo "${gitemail}")"
 ```
 
 ### Symfony CLI
