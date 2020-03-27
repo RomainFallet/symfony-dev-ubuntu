@@ -111,6 +111,9 @@ sudo sed -i'.backup' -e 's/post_max_size = 8M/post_max_size = 64M/g' "${phpinipa
 sudo sed -i'.backup' -e 's/upload_max_filesize = 8M/upload_max_filesize = 64M/g' "${phpinipath}"
 sudo sed -i'.backup' -e 's/memory_limit = 128M/memory_limit = -1/g' "${phpinipath}"
 sudo sed -i'.backup' -e 's/disable_functions =/disable_functions = error_reporting,ini_set,exec,passthru,shell_exec,system,proc_open,popen,curl_exec,curl_multi_exec,parse_ini_file,show_source/g' "${phpinipath}"
+sudo sed -i'.backup' -e 's/display_errors = Off/display_errors = On/g' "${phpinipath}"
+sudo sed -i'.backup' -e 's/display_startup_errors = Off/display_startup_errors = On/g' "${phpinipath}"
+sudo sed -i'.backup' -e 's/error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT/error_reporting = E_ALL/g' "${phpinipath}"
 
 # Replace default PHP installation in $PATH
 sudo update-alternatives --set php /usr/bin/php7.3
