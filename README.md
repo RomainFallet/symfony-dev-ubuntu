@@ -105,15 +105,21 @@ sudo apt install -y php7.3
 # Install extensions
 sudo apt install -y php7.3-mbstring php7.3-mysql php7.3-xml php7.3-curl php7.3-zip php7.3-intl php7.3-gd php-xdebug
 
-# Update some configuration in php.ini
+# Make a backup of the config file
 phpinipath=$(php -r "echo php_ini_loaded_file();")
-sudo sed -i'.backup' -e 's/post_max_size = 8M/post_max_size = 64M/g' "${phpinipath}"
-sudo sed -i'.backup' -e 's/upload_max_filesize = 8M/upload_max_filesize = 64M/g' "${phpinipath}"
-sudo sed -i'.backup' -e 's/memory_limit = 128M/memory_limit = -1/g' "${phpinipath}"
-sudo sed -i'.backup' -e 's/disable_functions =/disable_functions = error_reporting,ini_set,exec,passthru,shell_exec,system,proc_open,popen,curl_exec,curl_multi_exec,parse_ini_file,show_source/g' "${phpinipath}"
-sudo sed -i'.backup' -e 's/display_errors = Off/display_errors = On/g' "${phpinipath}"
-sudo sed -i'.backup' -e 's/display_startup_errors = Off/display_startup_errors = On/g' "${phpinipath}"
-sudo sed -i'.backup' -e 's/error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT/error_reporting = E_ALL/g' "${phpinipath}"
+sudo cp "${phpinipath}" $(dirname "${phpinipath}")/.php.ini.backup
+
+# Update some configuration in php.ini
+sudo sed -i'.tmp' -e 's/post_max_size = 8M/post_max_size = 64M/g' "${phpinipath}"
+sudo sed -i'.tmp' -e 's/upload_max_filesize = 8M/upload_max_filesize = 64M/g' "${phpinipath}"
+sudo sed -i'.tmp' -e 's/memory_limit = 128M/memory_limit = -1/g' "${phpinipath}"
+sudo sed -i'.tmp' -e 's/disable_functions =/disable_functions = error_reporting,ini_set,exec,passthru,shell_exec,system,proc_open,popen,curl_exec,curl_multi_exec,parse_ini_file,show_source/g' "${phpinipath}"
+sudo sed -i'.tmp' -e 's/display_errors = Off/display_errors = On/g' "${phpinipath}"
+sudo sed -i'.tmp' -e 's/display_startup_errors = Off/display_startup_errors = On/g' "${phpinipath}"
+sudo sed -i'.tmp' -e 's/error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT/error_reporting = E_ALL/g' "${phpinipath}"
+
+# Remove temporary file
+sudo rm "${phpinipath}.tmp"
 
 # Replace default PHP installation in $PATH
 sudo update-alternatives --set php /usr/bin/php7.3
