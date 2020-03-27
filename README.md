@@ -96,9 +96,6 @@ sudo mv ~/.symfony/bin/symfony /usr/local/bin/symfony
 # Add PHP official repository
 sudo add-apt-repository -y ppa:ondrej/php
 
-# Update packages list
-sudo apt update
-
 # Install
 sudo apt install -y php7.3
 
