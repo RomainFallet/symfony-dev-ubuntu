@@ -151,9 +151,6 @@ Ubuntu 18.04:
 # Add MariaDB official repository
 curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo -E bash
 
-# Update packages list
-sudo apt update
-
 # Install
 sudo apt install -y mariadb-server-10.4
 ```

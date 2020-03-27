@@ -56,11 +56,8 @@ composer -V || exit 1
 # Add MariaDB official repository
 curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo -E bash || exit 1
 
-# Update packages list
-sudo apt update || exit 1
-
 # Install
-sudo apt install -t mariadb-server-10.4 || exit 1
+sudo apt install -y mariadb-server-10.4 || exit 1
 sudo mysql -e "SELECT VERSION();" || exit 1
 
 # Add NodeJS official repository and update packages list
