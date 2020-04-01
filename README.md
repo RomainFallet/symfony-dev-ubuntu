@@ -1,5 +1,7 @@
 # The PHP/Symfony dev instructions kit for Ubuntu
 
+![logo-ubuntu](https://user-images.githubusercontent.com/6952638/78182032-b119d300-7465-11ea-9e00-43e3d7265f91.png)
+
 **This repository is part of the [symfony-dev-deploy](https://github.com/RomainFallet/symfony-dev-deploy) repository.**
 
 ![Test dev env install script](https://github.com/RomainFallet/symfony-dev-windows/workflows/Test%20dev%20env%20install%20script/badge.svg)
