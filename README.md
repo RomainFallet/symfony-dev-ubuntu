@@ -108,7 +108,7 @@ sudo apt install -y php7.3-mbstring php7.3-mysql php7.3-xml php7.3-curl php7.3-z
 
 # Make a backup of the config file
 phpinipath=$(php -r "echo php_ini_loaded_file();")
-sudo cp "${phpinipath}" $(dirname "${phpinipath}")/.php.ini.backup
+sudo cp "${phpinipath}" "$(dirname "${phpinipath}")/.php.ini.backup"
 
 # Update some configuration in php.ini
 sudo sed -i'.tmp' -e 's/post_max_size = 8M/post_max_size = 64M/g' "${phpinipath}"
