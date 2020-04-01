@@ -157,8 +157,6 @@ sudo mv /usr/local/bin/composer.phar /usr/local/bin/composer
 
 ![mariadb](https://user-images.githubusercontent.com/6952638/71176963-3a1c4e00-226b-11ea-9627-e64caabef009.png)
 
-Ubuntu 18.04:
-
 ```bash
 # Add MariaDB official repository
 curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo -E bash
