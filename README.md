@@ -1,8 +1,8 @@
 # The PHP/Symfony dev instructions kit for Ubuntu
 
-**This repository is part of the [symfony-dev-deploy](https://github.com/RomainFallet/symfony-dev-deploy) repository.**
+![logo-ubuntu](https://user-images.githubusercontent.com/6952638/78182032-b119d300-7465-11ea-9e00-43e3d7265f91.png)
 
-![Test dev env install script](https://github.com/RomainFallet/symfony-dev-windows/workflows/Test%20dev%20env%20install%20script/badge.svg)
+**This repository is part of the [symfony-dev-deploy](https://github.com/RomainFallet/symfony-dev-deploy) repository.**
 
 The purpose of this repository is to provide instructions to configure a PHP/Symfony development environment on **Ubuntu 18.04**.
 
@@ -108,7 +108,7 @@ sudo apt install -y php7.3-mbstring php7.3-mysql php7.3-xml php7.3-curl php7.3-z
 
 # Make a backup of the config file
 phpinipath=$(php -r "echo php_ini_loaded_file();")
-sudo cp "${phpinipath}" $(dirname "${phpinipath}")/.php.ini.backup
+sudo cp "${phpinipath}" "$(dirname "${phpinipath}")/.php.ini.backup"
 
 # Update some configuration in php.ini
 sudo sed -i'.tmp' -e 's/post_max_size = 8M/post_max_size = 64M/g' "${phpinipath}"
@@ -154,8 +154,6 @@ sudo mv /usr/local/bin/composer.phar /usr/local/bin/composer
 [Back to top ↑](#table-of-contents)
 
 ![mariadb](https://user-images.githubusercontent.com/6952638/71176963-3a1c4e00-226b-11ea-9627-e64caabef009.png)
-
-Ubuntu 18.04:
 
 ```bash
 # Add MariaDB official repository
