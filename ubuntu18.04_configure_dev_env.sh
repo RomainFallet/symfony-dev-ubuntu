@@ -96,7 +96,7 @@ sudo mysql -e "SELECT VERSION();" || exit 1
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - || exit 1
 
 # Install
-sudo apt install -y  || exit 1
+sudo apt install -y nodejs || exit 1
 
 node -v || exit 1
 npm -v || exit 1
